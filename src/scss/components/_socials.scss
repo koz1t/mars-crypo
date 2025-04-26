@@ -1,0 +1,41 @@
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  &__item {
+    flex-shrink: 0;
+    width: 5.74074rem;
+    height: 5.74074rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 50%;
+    transition: 0.4s all;
+    img {
+      width: 3.25926rem;
+      height: 3.25926rem;
+      object-fit: contain;
+      animation: dynamicEffect 4s ease-in-out infinite;
+    }
+    &:hover {
+      border-radius: 0;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .socials {
+    gap: 1.44rem;
+    &__item {
+      width: 3.96296rem;
+      height: 3.96296rem;
+      img {
+        width: 2.14815rem;
+        height: 2.14815rem;
+      }
+    }
+  }
+}

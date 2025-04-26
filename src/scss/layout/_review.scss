@@ -1,0 +1,74 @@
+.review {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  &__image {
+    position: relative;
+    flex: 0 0 7.18519rem;
+    height: 14.18519rem;
+    &::before {
+      content: '';
+      @extend %absolute-center;
+      width: 12rem;
+      height: 12rem;
+      background: $primaryColor;
+      border-radius: 50%;
+      animation: absolute-center-scale 2s infinite ease-in-out;
+    }
+    img {
+      position: relative;
+      @extend %contain-image;
+    }
+  }
+  &__text {
+    position: relative;
+    flex: 0 0 45.81481rem;
+    padding: 2.7rem;
+    background: #FFF5EB;
+    border-radius: 0.92593rem;
+    font-weight: 300;
+    b, strong {
+      font-weight: 700;
+      color: $primaryColor;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 3.62963rem;
+      height: 3.62963rem;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='98' height='98' viewBox='0 0 98 98' fill='none'%3E%3Cpath d='M18.7139 70.7273C14.5081 66.2602 12.25 61.2499 12.25 53.1282C12.25 38.8365 22.2827 26.0271 36.8725 19.6938L40.5189 25.3207C26.901 32.687 24.2387 42.2461 23.177 48.2731C25.3698 47.1379 28.2403 46.7418 31.0538 47.0032C38.4201 47.6851 44.2266 53.7325 44.2266 61.2499C44.2266 65.0403 42.7209 68.6755 40.0407 71.3557C37.3604 74.0359 33.7253 75.5416 29.9349 75.5416C27.8387 75.5235 25.7671 75.0885 23.8407 74.262C21.9142 73.4355 20.1715 72.2339 18.7139 70.7273ZM59.5473 70.7273C55.3414 66.2602 53.0833 61.2499 53.0833 53.1282C53.0833 38.8365 63.1161 26.0271 77.7058 19.6938L81.3523 25.3207C67.7343 32.687 65.072 42.2461 64.0103 48.2731C66.2031 47.1379 69.0737 46.7418 71.8871 47.0032C79.2534 47.6851 85.0599 53.7325 85.0599 61.2499C85.0599 65.0403 83.5542 68.6755 80.874 71.3557C78.1938 74.0359 74.5586 75.5416 70.7682 75.5416C68.6721 75.5235 66.6004 75.0885 64.674 74.262C62.7476 73.4355 61.0048 72.2339 59.5473 70.7273Z' fill='%23FF7801'/%3E%3C/svg%3E") no-repeat center / contain;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .review {
+    flex-direction: column-reverse;
+    gap: 1.1rem;
+    &__image {
+      flex: auto;
+      width: 7.40741rem;
+      height: 14.40741rem;
+    }
+    &__text {
+      flex: auto;
+      padding: 2.7rem 1.8rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .review {
+    gap: 2.22rem;
+    &__image {
+      width: 7.22222rem;
+      height: 14.18519rem;
+    }
+    &__text {
+      padding: 2.44rem 1.15rem 1.85rem;
+    }
+  }
+}

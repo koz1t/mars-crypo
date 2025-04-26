@@ -1,0 +1,27 @@
+@import 'abstracts/variables';
+@import 'abstracts/placeholders';
+@import 'abstracts/animations';
+
+@import 'vendors/reset';
+
+@import 'base/base';
+@import 'base/typography';
+
+@import 'components/logo';
+@import 'components/btn';
+@import 'components/emoji';
+@import 'components/ufos';
+@import 'components/socials';
+@import 'components/an1t';
+
+@import 'layout/container';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/bg';
+@import 'layout/text';
+@import 'layout/cards';
+@import 'layout/review';
+@import 'layout/chart';
+@import 'layout/accordion';
+
+@import 'pages/home';

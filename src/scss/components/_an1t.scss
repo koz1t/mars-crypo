@@ -1,0 +1,5 @@
+.an1t {
+  &:not(.an1t--visible) {
+    transition: none !important;
+  }
+}

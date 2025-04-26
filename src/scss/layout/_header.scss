@@ -1,0 +1,52 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+  padding: 2.48rem 0;
+  &__container {
+    width: 59.9%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2.48rem
+  }
+  &__logo {
+    @extend %absolute-center;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1.78rem 0;
+    &__container {
+      width: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.67rem
+    }
+    &__logo {
+      order: 2;
+      position: static;
+      transform: none;
+    }
+    &__btn:nth-child(2) {
+      order: 3;
+      margin-right: auto;
+    }
+    &__btn:nth-child(3) {
+      order: 1;
+      margin-left: auto;
+    }
+  } 
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 1.67rem 0;
+    &__container {
+      gap: 0.89rem
+    }
+  } 
+}

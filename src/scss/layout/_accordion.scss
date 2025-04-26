@@ -1,0 +1,86 @@
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 0.74rem;
+  &__item {
+    padding: 1.22222rem 1.51852rem 1.18519rem 1.92593rem;
+    border-radius: 2.88889rem;
+    border: 0.037rem solid $primaryColor;
+    &-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.92593rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.3s all;
+      &::after {
+        content: '';
+        flex-shrink: 0;
+        width: 1.5556rem;
+        height: 1.5556rem;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='13' viewBox='0 0 22 13' fill='none'%3E%3Cpath d='M1 1L11 11L21 1' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") $primaryColor no-repeat center / 0.74074rem 0.37037rem;
+        border-radius: 50%;
+        transition: 0.4s all;
+      }
+      &:has(input[type=checkbox]:checked)::after {
+        transform: rotate(180deg);
+      }
+      input[type=checkbox] {
+        display: none;
+      }
+      &:hover {
+        color: $primaryColor;
+        &::after {
+          filter: brightness(0.8);
+        }
+      }
+    }
+    &-text {
+      margin-top: 1rem;
+      font-size: 0.8148rem;
+      line-height: 130%;
+      opacity: 0.8;
+      transition: 0.4s all;
+    }
+    &:has(input[type=checkbox]:not(:checked)) &-text {
+      margin-top: 0;
+      line-height: 0%;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .accordion {
+    &__item {
+      &-title {
+        gap: 4rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .accordion {
+    &__item {
+      padding: 1rem 1.5rem;
+      &-title {
+        gap: 1rem;
+        font-size: 0.66667rem;
+        &::after {
+          width: 1.25rem;
+          height: 1.25rem;
+          background-size: 40%;
+        }
+      }
+      &-text {
+        margin-top: 0.8rem;
+        font-size: 0.5923rem;
+      }
+    }
+  }
+}

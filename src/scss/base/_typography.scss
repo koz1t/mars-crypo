@@ -1,0 +1,81 @@
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 400; /* Regular */
+  src: url('../../public/fonts/montserrat/Montserrat-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 600; /* SemiBold */
+  src: url('../../public/fonts/montserrat/Montserrat-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 500; /* Medium */
+  src: url('../../public/fonts/montserrat/Montserrat-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 300; /* Light */
+  src: url('../../public/fonts/montserrat/Montserrat-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 900; /* Black */
+  src: url('../../public/fonts/montserrat/Montserrat-Black.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'FT Sterling Trial';
+  font-weight: 400; /* Book */
+  src: url('../../public/fonts/ftsterlingtrial/ftsterlingtrial-book.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'FT Sterling Trial';
+  font-weight: 600; /* Semi-Bold */
+  src: url('../../public/fonts/ftsterlingtrial/ftsterlingtrial-semi-bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'FT Sterling Trial';
+  font-weight: 700; /* Bold */
+  src: url('../../public/fonts/ftsterlingtrial/ftsterlingtrial-bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'FT Sterling Trial';
+  font-weight: 400; /* Regular */
+  src: url('../../public/fonts/ftsterlingtrial/ftsterlingtrial-regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'FT Sterling Trial';
+  font-weight: 300; /* Light */
+  src: url('../../public/fonts/ftsterlingtrial/ftsterlingtrial-light.otf') format('opentype');
+}
+
+
+html, body {
+  font-family: "FT Sterling Trial", sans-serif;
+  font-size: 1.40625vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #373737;
+}
+
+@media (max-width: 768px) {
+  html, body {
+    font-size: 3.51563vw;
+  }
+}
+
+@media (max-width: 480px) {
+  html, body {
+    font-size: 5.625vw;
+  }
+}

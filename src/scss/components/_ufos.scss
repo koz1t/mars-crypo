@@ -1,0 +1,45 @@
+.ufos {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% - 2.3rem);
+    right: -1rem;
+    width: 10.14815rem;
+    height: 10.14815rem;
+    background: url(../images/ufos.png) no-repeat center / contain;
+    animation: float 2s infinite ease-in-out;
+    transition: 1s all;
+  }
+  &.an1t:not(.an1t--visible) {
+    &::before {
+      bottom: calc(100% + 5rem);
+      right: 0;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .ufos {
+    &::before {
+      bottom: calc(100% - 1.5rem);
+      right: -3rem;
+      width: 7.40741rem;
+      height: 7.40741rem;
+    }
+  } 
+}
+
+@media (max-width: 480px) {
+  .ufos {
+    &::before {
+      bottom: calc(100% - 0.5rem);
+      right: -1.5rem;
+      width: 5.55556rem;
+      height: 5.55556rem;
+    }
+  } 
+}

@@ -1,0 +1,128 @@
+.cards {
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.52rem;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.59rem;
+    padding: 1.94rem 1.1rem 1.74rem;
+    background: rgba(255, 120, 1, 0.04);
+    &-icon {
+      width: 4.22222rem;
+      height: 4.22222rem;
+      img {
+        @extend %contain-image;
+      }
+    }
+    &-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.48148rem;
+      font-weight: 900;
+      color: $primaryColor;
+    }
+    &-text {
+      font-size: 0.74074rem;
+      font-weight: 300;
+      color: #373737;
+      b, strong {
+        font-size: 0.74074rem;
+        font-weight: 700;
+        color: $primaryColor;
+      }
+      .emoji {
+        width: 0.95rem;
+        height: 0.95rem;
+      }
+    }
+    &-btns {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.37rem;
+      width: 100%;
+    }
+    &-btn {
+      width: 100%;
+    }
+  }
+  &--v2 {
+    .cards__items {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.63rem;
+    }
+    .cards__item {
+      gap: 0.33rem;
+      border-radius: 1.14815rem;
+      background: #FFF;
+      transition: 0.4s all;
+      &:hover {
+        border-radius: 0;
+      }
+      &-icon {
+        width: 5.7037rem;
+        height: 5.7037rem;
+      }
+      &-title, &-text {
+        font-family: 'Montserrat', sans-serif;
+        color: #373737;
+        text-align: center;
+      }
+      &-title {
+        font-size: 1rem;
+        font-weight: 600;
+      }
+      &-text {
+        font-size: 0.66667rem;
+      }
+    }
+    .cards__item {
+      padding: 0.81rem 1rem 1.19rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .cards {
+    &__items {
+      grid-template-columns: 1fr;
+      gap: 1.04rem;
+    }
+    &__item {
+      gap: 1.37rem;
+      padding: 1.8rem 1.25rem 1.89rem;
+      &-text {
+        .emoji {
+          width: 0.9rem;
+          height: 0.9rem;
+        }
+      }
+    }
+    &--v2 {
+      .cards__items {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .cards {
+    &__items {
+      gap: 0.59rem;
+    }
+    &__item {
+      padding: 1.8rem 1rem;
+    }
+    &--v2 {
+      max-width: 12.55556rem;
+      margin: 0 auto;
+      .cards__items {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}

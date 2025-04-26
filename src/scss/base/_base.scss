@@ -1,0 +1,27 @@
+::-webkit-scrollbar-track {
+  background: transparent; /* Прозрачный фон */
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-thumb {
+  background: #ff6b6b;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Тень для эффекта "плавающего" элемента */
+}
+
+// Прижать футер к низу страницы
+html, body, .wrapper {
+  height: 100%;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.footer {
+  margin-top: auto;
+}
+
+img, video {
+  max-width: 100%;
+}

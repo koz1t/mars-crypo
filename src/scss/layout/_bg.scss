@@ -1,0 +1,393 @@
+main > * {
+  position: relative;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  &__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__waves {
+    position: absolute;
+    top: -23.7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 53.92593rem;
+    height: 53.92593rem;
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1456' height='1456' viewBox='0 0 1456 1456' fill='none'%3E%3Cg opacity='0.4'%3E%3Ccircle opacity='0.77' cx='728' cy='728' r='454.5' stroke='white'/%3E%3Ccircle opacity='0.75' cx='728' cy='728' r='591' stroke='white'/%3E%3Ccircle opacity='0.73' cx='728' cy='728' r='727.5' stroke='white'/%3E%3Ccircle opacity='0.81' cx='728' cy='728' r='181.5' stroke='white'/%3E%3Ccircle opacity='0.79' cx='728' cy='728' r='318' stroke='white'/%3E%3C/g%3E%3C/svg%3E") no-repeat center / contain;
+      opacity: 0;
+      animation: pulseScaleFade 6s linear infinite;
+    }
+    &::after {
+      animation-delay: 3s;
+    }
+    &--v2 {
+      width: 35.25926rem;
+      height: 35.25926rem;
+      top: -12.07rem;
+      left: auto;
+      right: -4.56rem;
+      transform: none;
+      &::before, &::after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='952' height='952' viewBox='0 0 952 952' fill='none'%3E%3Cg opacity='0.17'%3E%3Ccircle cx='476' cy='476' r='297' stroke='%23FF7801'/%3E%3Ccircle cx='476' cy='476' r='386.25' stroke='%23FF7801'/%3E%3Ccircle cx='476' cy='476' r='475.5' stroke='%23FF7801'/%3E%3Ccircle cx='476' cy='476' r='118.5' stroke='%23FF7801'/%3E%3Ccircle cx='476' cy='476' r='207.75' stroke='%23FF7801'/%3E%3C/g%3E%3C/svg%3E");
+        animation: none;
+        opacity: 0.5;
+      }
+    }
+  }
+  &__elon-planets {
+    position: absolute;
+    top: -7.3rem;
+    right: -10.5rem;
+    width: 32rem;
+    height: 32rem;
+    background: url(../images/cute-planets-with-elon.png) no-repeat center / contain;
+    animation: float 4s infinite ease-in-out;
+  }
+  &__blink {
+    position: absolute;
+    right: -4.16rem;
+    top: -3.22rem;
+    width: 12.40985rem;
+    height: 12.40985rem;
+    transform: rotate(-120deg);
+    border-radius: 50%;
+    background: linear-gradient(180deg, rgba(0, 243, 45, 0.60) 0%, rgba(255, 120, 1, 0.60) 100%);
+    filter: blur(3.819rem);
+    animation: scale-rotate 4s infinite ease-in-out;
+    &--v2 {
+      top: -8.81rem;
+      right: -5.78rem;
+      width: 17.66667rem;
+      height: 17.59259rem;
+      border-radius: 17.66667rem;
+      background: linear-gradient(180deg, rgba(74, 31, 134, 0.60) 0%, rgba(105, 47, 239, 0.60) 100%);
+      filter: blur(5.555rem);
+      animation: blur2 4s infinite ease-in-out;
+    }
+    &--v3 {
+      top: auto;
+      bottom: -0.7rem;
+      right: 5.19rem;
+      width: 22.66667rem;
+      height: 3.85185rem;
+      border-radius: 22.66667rem;
+      background: #FFD186;
+      filter: blur(1.713rem);
+      transform: none;
+      animation: blur3 3s infinite ease-in-out;
+    }
+  }
+  &__mars {
+    &::before, &::after {
+      content: '';
+      position: absolute;
+    }
+    &::before {
+      top: -4.96296rem;
+      right: -1rem;
+      width: 16.40741rem;
+      height: 16.40741rem;
+      background: #FE890C;
+      border-radius: 50%;
+      filter: blur(4.4444rem);
+      animation: blur 5s infinite ease-in-out;
+    }
+    &::after {
+      top: -11.77778rem;
+      right: -8.47rem;
+      width: 25.19181rem;
+      height: 25.19181rem;
+      background: url('../images/mars.png') no-repeat center / contain;
+      animation: swing 20s infinite ease-in-out;
+    }
+  }
+  &__astronaut {
+    position: absolute;
+    top: 6.48rem;
+    left: -1.45rem;
+    width: 6.22222rem;
+    height: 10.55556rem;
+    background: url('../images/astronaut2.png') no-repeat center / contain;
+    transform: rotate(25deg);
+    animation: orbit 30s infinite linear;
+  }
+  &__tickets {
+    position: absolute;
+    top: 2.41rem;
+    right: 26.55rem;
+    width: 5.81856rem;
+    height: 5.81856rem;
+    transform: rotate(-22.023deg);
+    background: url('../images/mars-tickets2.png') no-repeat center / contain;
+    animation: orbit2 5s infinite linear;
+  }
+  &__planets {
+    &::before, &::after {
+      content: '';
+      position: absolute;
+    }
+    &::before {
+      top: -11.7rem;
+      left: -12.63rem;
+      width: 30.62963rem;
+      height: 30.48148rem;
+      border-radius: 30.62963rem;
+      background: linear-gradient(180deg, rgba(0, 166, 249, 0.60) 0%, rgba(186, 47, 151, 0.60) 100%);
+      filter: blur(5.555rem);
+      animation: scale-rotate 5s infinite linear;
+    }
+    &::after {
+      top: -3rem;
+      left: -8.5rem;
+      width: 22.44444rem;
+      height: 19.40741rem;
+      background: url('../images/cute-planets.png') no-repeat center / contain;
+      transform: rotate(57deg);
+      animation: swing2 5s infinite ease-in-out;
+    }
+  }
+  &__rocket {
+    position: absolute;
+    top: 2.96rem;
+    right: 3.89rem;
+    width: 17.74074rem;
+    height: 9.25926rem;
+    background: url('../images/rocket.png') no-repeat center / contain;
+    animation: orbit3 50s infinite linear;
+  }
+  &__circle {
+    position: absolute;
+    background: $primaryColor;
+    border-radius: 50%;
+    animation: pulse 3s infinite ease-in-out;
+    &:nth-child(1), &:nth-child(2) {
+      top: 3.15rem;
+      width: 4.74074rem;
+      height: 4.74074rem;
+    }
+    &:nth-child(1) {
+      left: 5.93rem;
+    }
+    &:nth-child(2) {
+      right: 5.93rem;
+      animation-delay: 0.4s;
+    }
+    &:nth-child(3), &:nth-child(4) {
+      top: 6.48rem;
+      width: 8.40741rem;
+      height: 8.40741rem;
+    }
+    &:nth-child(3) {
+      left: 11.81rem;
+      animation-delay: 0.8s;
+    }
+    &:nth-child(4) {
+      right: 11.81rem;
+      animation-delay: 1.2s;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .bg {
+    &__waves {
+      top: -16rem;
+      left: calc(50% - 0.25rem);
+      width: 39.81481rem;
+      height: 39.81481rem;
+      &--v2 {
+        display: none;
+      }
+    }
+    &__elon-planets {
+      top: -2.5rem;
+      right: -7.8rem;
+      width: 17rem;
+      height: 17rem;
+    }
+    &__blink {
+      right: -5.61rem;
+      top: -7.03704rem;
+      &--v3 {
+        top: auto;
+        bottom: -1rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    &__mars {
+      &::before {
+        top: -4rem;
+        right: -2rem;
+        width: 14.40741rem;
+        height: 14.40741rem;
+      }
+      &::after {
+        top: -9rem;
+        right: -7rem;
+        width: 20.19181rem;
+        height: 20.19181rem;
+      }
+    }
+    &__astronaut {
+      top: 5rem;
+      left: -0.5rem;
+      width: 5.22222rem;
+      height: 9.55556rem;
+    }
+    &__tickets {
+      top: 7rem;
+      right: 12.55rem;
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+    &__planets {
+      &::after {
+        top: -2rem;
+        left: -6.5rem;
+        width: 17.44444rem;
+        height: 14.40741rem;
+      }
+    }
+    &__rocket {
+      top: 3rem;
+      right: 2rem;
+      width: 8rem;
+      height: 5rem;
+    }
+    &__circle {
+      &:nth-child(1), &:nth-child(2) {
+        top: 3.37rem;
+        width: 1.92593rem;
+        height: 1.92593rem;
+      }
+      &:nth-child(1) {
+        left: 0.44rem;
+      }
+      &:nth-child(2) {
+        right: 0.44rem;
+      }
+      &:nth-child(3), &:nth-child(4) {
+        top: 5.3rem;
+        width: 3.37037rem;
+        height: 3.37037rem;
+      }
+      &:nth-child(3) {
+        left: 1.85rem;
+      }
+      &:nth-child(4) {
+        right: 1.85rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .bg {
+    &__waves {
+      top: -15rem;
+      left: calc(50% - 0.1rem);
+      width: 36rem;
+      height: 36rem;
+    }
+    &__elon-planets {
+      top: -3rem;
+      right: -9.6rem;
+      width: 17rem;
+      height: 17rem;
+    }
+    &__blink {
+      right: -6.9rem;
+      top: -7.40741rem;
+      &--v2 {
+        top: -5rem;
+        right: -5rem;
+        width: 12.66667rem;
+        height: 12.5926rem;
+      }
+      &--v3 {
+        top: auto;
+      }
+    }
+    &__mars {
+      &::before {
+        top: -2rem;
+        right: -2rem;
+        width: 12rem;
+        height: 12rem;
+      }
+      &::after {
+        top: -8rem;
+        right: -8rem;
+        width: 18.5rem;
+        height: 18.5rem;
+      }
+    }
+    &__astronaut {
+      top: 2.5rem;
+      width: 4.8rem;
+      height: 8.7rem;
+    }
+    &__tickets {
+      top: 8rem;
+      right: 47%;
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+    &__planets {
+      &::before {
+        top: -3.7rem;
+        left: -6.63rem;
+        width: 20.62963rem;
+        height: 20.48148rem;
+      }
+      &::after {
+        top: -1.5rem;
+        left: -5rem;
+        width: 13rem;
+        height: 10rem;
+      }
+    }
+    &__rocket {
+      top: 2rem;
+      right: 1rem;
+      width: 6rem;
+      height: 4rem;
+    }
+    &__circle {
+      &:nth-child(1), &:nth-child(2) {
+        top: 2.07rem;
+      }
+      &:nth-child(1) {
+        left: 0.67rem;
+      }
+      &:nth-child(2) {
+        right: 0.67rem;
+      }
+      &:nth-child(3), &:nth-child(4) {
+        top: 4rem;
+      }
+      &:nth-child(3) {
+        left: 2.07rem;
+      }
+      &:nth-child(4) {
+        right: 2.07rem;
+      }
+    }
+  } 
+}
